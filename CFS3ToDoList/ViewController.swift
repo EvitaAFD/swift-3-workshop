@@ -18,7 +18,6 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         self.tableView.dataSource = self
         
-        
     }
 
     override func didReceiveMemoryWarning() {
