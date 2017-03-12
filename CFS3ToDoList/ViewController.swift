@@ -18,10 +18,6 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         self.tableView.dataSource = self
         
-        for number in 1...5{
-            let todo = Todo(text: "Todo Number \(number)")
-            TodoList.shared.add(todo: todo)
-        }
         
     }
 
@@ -30,6 +26,11 @@ class ViewController: UIViewController, UITableViewDataSource {
         // Dispose of any resources that can be recreated.
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        tableView.reloadData()
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return TodoList.shared.count()

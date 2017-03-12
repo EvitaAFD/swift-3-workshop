@@ -10,8 +10,12 @@ import UIKit
 
 class NewTodoViewController: UIViewController {
 
+    @IBOutlet weak var textField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.textField.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -24,6 +28,19 @@ class NewTodoViewController: UIViewController {
     @IBAction func closeButtonPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if let userText = textField.text{
+            let todo = Todo(text: userText)
+            TodoList.shared.add(todo: todo)
+        }
+        
+        dismiss(animated: true, completion: nil)
+        
+        return true
+    }
+
 
     /*
     // MARK: - Navigation

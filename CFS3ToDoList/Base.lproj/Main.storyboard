@@ -109,17 +109,41 @@
                                     <action selector="closeButtonPressed:" destination="xoW-vD-kK2" eventType="touchUpInside" id="rcy-n4-0B6"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Todo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QG0-lA-VLh">
+                                <rect key="frame" x="146" y="95" width="82" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the details of your next todo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Yy-m2-XKG">
+                                <rect key="frame" x="16" y="124" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="9Yy-m2-XKG" firstAttribute="trailing" secondItem="Gsq-T0-KI9" secondAttribute="trailingMargin" id="0cW-58-9uM"/>
+                            <constraint firstItem="9Yy-m2-XKG" firstAttribute="top" secondItem="QG0-lA-VLh" secondAttribute="bottom" constant="7.5" id="6wZ-fr-VNQ"/>
+                            <constraint firstItem="9Yy-m2-XKG" firstAttribute="leading" secondItem="Gsq-T0-KI9" secondAttribute="leadingMargin" id="9LL-Kz-axt"/>
+                            <constraint firstItem="9Yy-m2-XKG" firstAttribute="top" secondItem="QG0-lA-VLh" secondAttribute="bottom" constant="7.5" id="BYA-NS-R6h"/>
+                            <constraint firstItem="9Yy-m2-XKG" firstAttribute="leading" secondItem="Gsq-T0-KI9" secondAttribute="leadingMargin" id="EkM-Hj-TAw"/>
+                            <constraint firstItem="QG0-lA-VLh" firstAttribute="top" secondItem="4dv-pE-Zzy" secondAttribute="bottom" constant="75" id="Z7f-nn-14Z"/>
+                            <constraint firstItem="QG0-lA-VLh" firstAttribute="centerX" secondItem="Gsq-T0-KI9" secondAttribute="centerX" id="ZBS-gq-Iv8"/>
                             <constraint firstItem="zSd-Qg-nfW" firstAttribute="top" secondItem="4dv-pE-Zzy" secondAttribute="bottom" constant="8" id="c84-CW-71N"/>
                             <constraint firstItem="zSd-Qg-nfW" firstAttribute="leading" secondItem="Gsq-T0-KI9" secondAttribute="leadingMargin" id="gZg-Vg-rkB"/>
+                            <constraint firstItem="QG0-lA-VLh" firstAttribute="centerX" secondItem="Gsq-T0-KI9" secondAttribute="centerX" id="os7-zu-gS5"/>
+                            <constraint firstItem="9Yy-m2-XKG" firstAttribute="trailing" secondItem="Gsq-T0-KI9" secondAttribute="trailingMargin" id="v6U-B2-iZa"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="9Yy-m2-XKG" id="lGH-0s-Aqm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1G6-WB-ejD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1788" y="-551"/>
+            <point key="canvasLocation" x="1788" y="-551.87406296851577"/>
         </scene>
     </scenes>
 </document>
